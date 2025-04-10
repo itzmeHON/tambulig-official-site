@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tambulig Zamboanga del Sur Official Site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 56px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .hero {
+      background: url('tbl.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: rgb(150, 144, 144);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .section:nth-child(even) {
+      background-color: #d3dae0;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    footer {
+      background-color: #343a40;
+      color: rgb(199, 238, 232);
+      text-align: center;
+      padding: 20px;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Tambulig ZDS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#government">Government</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tourism">Tourism</a></li>
+        <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="home">
+  <h1 class="display-4">Welcome to Tambulig</h1>
+  <p class="lead">The Heart of Zamboanga del Sur</p>
+</header>
+
+<!-- Sections -->
+<section class="section fade-in" id="government">
+  <div class="container">
+    <h2 class="text-center mb-4"><i class="fas fa-university"></i> Local Government</h2>
+    <p class="text-center">Meet our officials and discover the services they provide for our citizens.</p>
+  </div>
+</section>
+
+<section class="section fade-in" id="tourism">
+  <div class="container">
+    <h2 class="text-center mb-4"><i class="fas fa-map-marked-alt"></i> Tourism</h2>
+    <p class="text-center">Explore the beauty and culture of Tambulig—from festivals to scenic spots.</p>
+  </div>
+</section>
+
+<section class="section fade-in" id="news">
+  <div class="container">
+    <h2 class="text-center mb-4"><i class="fas fa-bullhorn"></i> News & Announcements</h2>
+    <p class="text-center">Stay updated with the latest happenings and public advisories in Tambulig.</p>
+  </div>
+</section>
+
+<section class="section fade-in" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4"><i class="fas fa-envelope"></i> Contact Us</h2>
+    <p class="text-center">Email: tambuligZDS.gov@gmail.com | Phone: (082) 123-4567</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Tambulig Zamboanga del Sur. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS + Scroll Animation Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Scroll animation for sections
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+</body>
+</html>
